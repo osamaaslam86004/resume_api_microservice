@@ -1,0 +1,105 @@
+## Logout Endpoint for JWT (e.g., blacklist)
+
+###
+POST http://127.0.0.1:8001/resume/api/get-personal-info-data/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2MjgzMTQ5LCJpYXQiOjE3NDYxMzMxNDksImp0aSI6IjcyMmJmYmFjMzQ5MTQ3ZmFhNmYzN2I2YmZlYTExYjI4IiwidXNlcl9pZCI6MiwidXNlciI6InN0cmluZzEifQ.edRFp0x6PyNcIb1IJeJrfednlbbrCoO5QxCnMYbwSnI
+
+{
+  "user_id": 1,
+  "first_name": "John",
+  "middle_name": "H.",
+  "last_name": "Doe",
+  "suffix": "PhD",
+  "locality": "Boston",
+  "region": "MA",
+  "title": "Senior Software Engineer",
+  "email": "john.doe@example.com",
+  "linkedin": "https://linkedin.com/in/johndoe",
+  "facebook": "https://facebook.com/johndoe",
+  "github": "https://github.com/johndoe",
+  "site": "https://johndoe.dev",
+  "twittername": "johnnydev",
+  "overview": {
+    "text": "Experienced software engineer specializing in backend and cloud solutions with a passion for clean architecture and scalability."
+  },
+  "education": [
+    {
+      "name": "MIT",
+      "location": "Cambridge, MA",
+      "schoolurl": "https://web.mit.edu",
+      "education_start_date": "2014-09-01",
+      "education_end_date": "2018-06-01",
+      "degree": "Bachelor of Science in Computer Science",
+      "description": "Focused on software engineering, distributed systems, and artificial intelligence."
+    },
+    {
+      "name": "Stanford University",
+      "location": "Stanford, CA",
+      "schoolurl": "https://www.stanford.edu",
+      "education_start_date": "2019-09-01",
+      "education_end_date": "2021-06-01",
+      "degree": "Master of Science in Artificial Intelligence",
+      "description": "Specialization in deep learning and natural language processing."
+    }
+  ],
+  "job": {
+    "company": "Google",
+    "companyurl": "https://www.google.com",
+    "location": "Mountain View, CA",
+    "title": "Backend Engineer",
+    "description": "Worked on building scalable backend services for Google Cloud Platform.",
+    "job_start_date": "2021-07-01",
+    "job_end_date": "2024-04-01",
+    "is_current": false,
+    "is_public": true,
+    "image": "company_logos/google.png",
+    "accomplishment": {
+      "job_accomplishment": "Built and deployed a microservice handling millions of requests per day with 99.99% uptime."
+    }
+  },
+  "skill": [
+    {
+      "text": "Problem Solving",
+      "skill_level": "Expert"
+    },
+    {
+      "text": "Cloud Computing",
+      "skill_level": "Advanced"
+    }
+  ],
+  "programming_area": [
+    {
+      "programming_area_name": "BACKEND",
+      "programming_language_name": "Python (Django)"
+    },
+    {
+      "programming_area_name": "FRONTEND",
+      "programming_language_name": "React"
+    }
+  ],
+  "projects": [
+    {
+      "project_name": "E-Commerce API",
+      "short_description": "A scalable REST API for an online marketplace.",
+      "long_description": "Built with Django Rest Framework and PostgreSQL, supporting advanced search, filtering, and payment integration.",
+      "link": "https://github.com/johndoe/ecommerce-api"
+    },
+    {
+      "project_name": "Portfolio Website",
+      "short_description": "Personal portfolio showcasing projects and blog posts.",
+      "long_description": "Developed using React, hosted on Vercel with CI/CD setup.",
+      "link": "https://johndoe.dev"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Efficient Deep Learning Techniques",
+      "authors": "John Doe, Jane Smith",
+      "journal": "Journal of AI Research",
+      "year": 2023,
+      "link": "https://journals.ai-research.org/efficient-deep-learning"
+    }
+  ]
+}

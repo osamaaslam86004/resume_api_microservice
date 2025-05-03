@@ -1,0 +1,38 @@
+# ### Check if user exists (correct user_id)
+POST http://127.0.0.1:8000/api/auth/user-exists/
+Content-Type: application/json
+{
+    "user_id": 5
+}
+
+
+### Check if user does NOT exist (invalid user_id)
+GET http://127.0.0.1:8000/user-exists/
+Content-Type: application/json
+
+{
+    "user_id": 9999
+}
+
+### Missing user_id (should return 400 Bad Request)
+GET http://127.0.0.1:8000/user-exists/
+Content-Type: application/json
+
+{
+}
+
+###
+GET https://l8tmowpqw5.execute-api.us-east-1.amazonaws.com/dev/api/auth/logout/
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzE2MzM3NiwiaWF0IjoxNzQ2Mjk5Mzc2LCJqdGkiOiIxOTEwNDRmNWE4MzU0NzM0YWQ2ZTZiOWUzZjIyOWY3MiIsInVzZXJfaWQiOjEsInVzZXIiOiJzdHJpbmcifQ.BxPU8L0X2lHlKhJN5YWy6euQodywK2vCax6pgyf7hk0
+
+
+### Check if user exists (correct user_id)
+POST http://127.0.0.1:8000/api/auth/cleanup-tokens/
+Accept: application/json
+Content-Type: application/json
+
+{
+}
+

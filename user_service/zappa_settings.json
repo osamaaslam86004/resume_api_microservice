@@ -1,0 +1,38 @@
+{
+    "dev": {
+        "cors": true,
+        "touch_path": "health-check/",
+        "aws_region": "us-east-1",
+        "django_settings": "user_service.settings",
+        "app_function": "user_service.wsgi.application",
+        "runtime": "python3.12",
+        "exclude": [
+            "boto3",
+            "dateutil",
+            "botocore",
+            "s3transfer",
+            "concurrent"
+        ],
+        "profile_name": "default",
+        "project_name": "user-service",
+        "manage_roles": true,
+        "role_name": "user-service-dev-ZappaLambdaExecutionRole",
+        "role_arn": "arn:aws:iam::713881799853:role/user-service-dev-ZappaLambdaExecutionRole",
+        "s3_bucket": "resume-api-backend",
+        "api_gateway": "KAO6nEWNIAMEVLQ=",
+        "vpc_config": {
+            "SubnetIds": [
+                "subnet-000dc25ab3c37f54f"
+            ],
+            "SecurityGroupIds": [
+                "sg-0249d5ea2f986487a"
+            ]
+        },
+        "events": [
+            {
+                "function": "api_auth.tasks.delete.delete_expired_tokens",
+                "expression": "cron(0 0 * * ? *)"
+            }
+        ]
+    }
+}
