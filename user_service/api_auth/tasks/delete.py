@@ -8,7 +8,10 @@ logger = logging.getLogger(__name__)
 
 
 def delete_blacklisted_tokens():
-    """Delete blacklisted JWT tokens older than 24 hours"""
+    """Delete blacklisted JWT tokens older than 24 hours
+
+    Command: zappa tail dev --filter="api_auth"
+    """
 
     logger.info(f"My scheduled task ran at {timezone.now()}")
 

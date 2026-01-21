@@ -30,7 +30,7 @@
         },
         "events": [
             {
-                "function": "api_auth.tasks.delete.delete_expired_tokens",
+                "function": "api_auth.tasks.delete.delete_blacklisted_tokens",
                 "expression": "cron(0 0 * * ? *)"
             }
         ]
